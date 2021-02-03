@@ -1,11 +1,13 @@
-const express = require('express');
+const express=require('express');
+const expressConfig = require('./config/express');
 const port = 5000;
+const routes=require('./routes');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('dsds');
-});
+require('./config/express')(app);
+
+app.use(routes);
 
 
 
