@@ -1,9 +1,10 @@
 const express=require('express');
-const expressConfig = require('./config/express');
 const port = 5000;
 const routes=require('./routes');
 
 const app = express();
+/* const expressConfig = require('./config/express');
+expressConfig(app); */
 
 require('./config/express')(app);
 

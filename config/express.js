@@ -1,5 +1,6 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
+const cookieParser=require('cookie-parser');
 
 
 function setupExpress(app) {
@@ -14,6 +15,8 @@ function setupExpress(app) {
     app.use(express.urlencoded({
         extended: true,
     }));
+
+    app.use(cookieParser());
 }
 
 module.exports = setupExpress;
