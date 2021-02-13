@@ -1,10 +1,11 @@
 <section id="viewCatalog" class="background-img">
-    {{#each hotels}}
-    {{>hotel}}
-    {{else}}
-    <div class="guest">
+
+    {{!-- <div class="guest">
         There are no Hotels found...
-    </div>
+    </div> --}}
+
+    {{#each hotels}}
+        {{>hotel}}
     {{/each}}
-    </div>
+
 </section>
