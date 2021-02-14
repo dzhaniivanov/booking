@@ -15,16 +15,16 @@
         <nav>
             <div class="left-container">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Register</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/auth/login">Login</a></li>
+                    <li><a href="/auth/register">Register</a></li>
                 </ul>
             </div>
         </nav>
 
         <section id="viewRegister">
             <h2>Create your account:</h2>
-            <form id="formRegister">
+            <form id="formRegister" action="/auth/register" method="POST">
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="email" placeholder="Email">
                 <label for="username">Username:</label>
@@ -33,6 +33,9 @@
                 <input type="password" id="password" name="password" placeholder="Password">
                 <label for="rePassword">Repeat Password:</label>
                 <input type="password" id="rePassword" name="rePassword" placeholder="Repeat Password">
+                {{#if error}}
+                <span class="errorBox">{{error.message}}</span>
+                {{/if}}
                 <input type="submit" class="register" value="Register">
             </form>
         </section>

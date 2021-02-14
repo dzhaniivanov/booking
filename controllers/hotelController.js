@@ -22,4 +22,6 @@ router.get('/details/:hotelId', async  (req, res) => {
     res.render('details', { title: 'details',hotel})
 });
 
+
+
 module.exports = router;
